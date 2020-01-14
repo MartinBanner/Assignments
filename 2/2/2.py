@@ -39,47 +39,45 @@ def query(tup):
 def deposit(tup, bank_balance_limit=1000000000):
     depo = 0
     bank_balance = 0
-    tup_tmp = tup
     try:
         depo = int(input("请输入您要存款的数额："))
         if depo > 0:
-            tup += ((str(datetime.datetime.now()), depo),)
-            bank_balance = sum_record(tup)
+            bank_balance = sum_record(tup) + depo
             if bank_balance <= bank_balance_limit:
+                tup += ((str(datetime.datetime.now()), depo),)
                 print("操作成功，您现在的账户余额为：{0} 元。".format(bank_balance))
                 return tup
             else:
                 print("超过存款上限 10 亿元，请重新输入。")
-                return tup_tmp
+                return tup
         else:
             print("请输入一个正整数。")
-            return tup_tmp
+            return tup
     except:
         print("请输入一个正整数。")
-        return tup_tmp
+        return tup
 
 
 def withdraw(tup, bank_balance_limit=0):
     draw = 0
     bank_balance = 0
-    tup_tmp = tup
     try:
         draw = -int(input("请输入您要取款的数额："))
         if draw < 0:
-            tup += ((str(datetime.datetime.now()), draw),)
-            bank_balance = sum_record(tup)
+            bank_balance = sum_record(tup) + draw
             if bank_balance >= bank_balance_limit:
+                tup += ((str(datetime.datetime.now()), draw),)
                 print("操作成功，您现在的账户余额为：{0} 元。".format(bank_balance))
                 return tup
             else:
                 print("对不起，您的账户余额不足。")
-                return tup_tmp
+                return tup
         else:
             print("请输入一个正整数。")
-            return tup_tmp
+            return tup
     except:
         print("请输入一个正整数。")
-        return tup_tmp
+        return tup
 
 
 def history(tup):

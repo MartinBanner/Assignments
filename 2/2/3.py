@@ -13,11 +13,8 @@ id2word = {}
 
 vocab = list(set(text.split(" ")))
 
-for i in range(len(vocab)):
-    word2id.update({vocab[i]:i})
-
-for i in range(len(vocab)):
-    id2word.update({i:vocab[i]})
+word2id = dict(zip(vocab, range(len(vocab))))
+id2word = dict(zip(range(len(vocab)), vocab))
 
 
 print("vocab = ", vocab)

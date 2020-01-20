@@ -4,12 +4,12 @@
 
 def print_string(*args, sep=' ', end='\n'):
     ls = []
-    result = ''
+    string = ''
 
     ls = [str(arg) for arg in args]
-    result = sep.join(ls) + end
+    string = sep.join(ls) + end
 
-    return result
+    return string
 
 
 

@@ -21,7 +21,7 @@ def ls_fib_gener(n):
     return ls_fib
 
 
-#给定一个数值n，将前n项的波那契数列打印出来（包括第0项）。
+# 给定一个数值n，将前n项的波那契数列打印出来（包括第0项）。
 def print_fib(n):
     ls_fib = []
 

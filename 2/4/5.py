@@ -12,7 +12,7 @@ from collections import Counter
 ANP = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~，。、“”；：？！"
 
 
-#去掉英文字符、数字和标点符号
+# 去掉英文字符、数字和标点符号
 def remover(s, item=ANP):
     s_clean = ""
 

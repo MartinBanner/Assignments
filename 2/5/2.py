@@ -430,7 +430,6 @@ def gameloop():
 
         if LVBU.hp <= 0:
             LVBU.die()
-            del(LVBU)
             break
 
 

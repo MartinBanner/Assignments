@@ -78,4 +78,5 @@ print("\n")
 # 显示“ZF”目前信息
 # 令“ZF”攻击“LB”
 ZF.get_inf()
+
 ZF.attack(LB)

@@ -59,5 +59,3 @@ dtr.fit(x_train, y_train)
 
 score_dtr = dtr.score(x_test, y_test)
 print("决策树：", score_dtr)
-
-

@@ -15,6 +15,7 @@ from sklearn.tree import DecisionTreeRegressor
 
 # 数据预处理
 ccpp_df = pd.read_csv("data.csv")
+
 ccpp_df = ccpp_df.drop_duplicates()
 ccpp_df = ccpp_df.reset_index(drop=True)
 
